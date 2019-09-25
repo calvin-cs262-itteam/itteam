@@ -4,9 +4,9 @@ It’s a fact of life: young adults are hungry all the time for good food. Unfor
 The technology that The IT Team has chosen to use to create this app is Ionic. Ionic is a web-based, cross-platform application development software that has the capability to function in a browser and on mobile devices. This will allow EasyEats to reach a larger pool of customers. 
 
 ## IT Team Members
-Marcos Hernandez
-Annika Johnson
-Collin Lilienthal
-Ian Lilienthal
-Nate Walter
-Josh Wright
+Marcos Hernandez  
+Annika Johnson  
+Collin Lilienthal  
+Ian Lilienthal  
+Nate Walter  
+Josh Wright  

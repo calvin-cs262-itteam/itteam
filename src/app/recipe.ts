@@ -20,4 +20,14 @@ export class Recipe {
         this.rating = 0;
         this.nratings = 0;
     }
+
+    /**
+     * Rate the recipe. Currently doesn't track specific ratings, just calculates an average using the previous ratings,
+     * the new rating, and the total number of ratings.
+     * @param rating 
+     */
+    rate(rating:number) {
+        this.nratings++;
+        this.rating = (this.rating + rating) / this.nratings
+    }
 }

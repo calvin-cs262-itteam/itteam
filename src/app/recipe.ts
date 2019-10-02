@@ -2,12 +2,18 @@
  * Recipe class.
  */
 export class Recipe {
-    name : string;          // The name of the recipe
-    description : string;   // a description of the recipe
-    rating : number;        // Rating
-    nratings : number;      // The total number of ratings (used to calculate average)
+    private _name : string;          // The name of the recipe
+    private _description : string;   // a description of the recipe
+    private _rating : number;        // Rating
+    private _nratings : number;      // The total number of ratings (used to calculate average)
     //TODO: add tags
     //TODO: We'll probably want a rating class in the future so we can tie specific ratings to users, but for now we can use numbers
+
+    // getters
+    get name() : string { return this._name }
+    get description() : string { return this._description }
+    get rating() : number { return this._rating }
+    get nratings() : number { return this._nratings }
 
     /**
      * The constructor doesn't get rating info because ratings start unrated.
@@ -15,10 +21,10 @@ export class Recipe {
      * @param desc Description of the recipe.
      */
     constructor(name:string, desc:string) {
-        this.name = name;
-        this.description = desc;
-        this.rating = 0;
-        this.nratings = 0;
+        this._name = name;
+        this._description = desc;
+        this._rating = 0;
+        this._nratings = 0;
     }
 
     /**
@@ -27,7 +33,7 @@ export class Recipe {
      * @param rating The new rating to factor in.
      */
     rate(rating:number) {
-        this.nratings++;
-        this.rating = (this.rating + rating) / this.nratings
+        this._nratings++;
+        this._rating = (this._rating + rating) / this._nratings
     }
 }

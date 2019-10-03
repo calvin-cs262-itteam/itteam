@@ -6,6 +6,7 @@ export class Recipe {
     private _description : string;   // a description of the recipe
     private _rating : number;        // Rating
     private _nratings : number;      // The total number of ratings (used to calculate average)
+    private _imgPath : string;       // Path to image of recipe
     //TODO: add tags
     //TODO: We'll probably want a rating class in the future so we can tie specific ratings to users, but for now we can use numbers
 
@@ -14,17 +15,20 @@ export class Recipe {
     get description() : string { return this._description }
     get rating() : number { return this._rating }
     get nratings() : number { return this._nratings }
+    get imgPath() : string { return this._imgPath }
 
     /**
      * The constructor doesn't get rating info because ratings start unrated.
      * @param name Name of the recipe.
      * @param desc Description of the recipe.
+     * @param img Path to the image of the recipe.
      */
-    constructor(name:string, desc:string) {
+    constructor(name:string, desc:string, img:string) {
         this._name = name;
         this._description = desc;
         this._rating = 0;
         this._nratings = 0;
+        this._imgPath = img;
     }
 
     /**

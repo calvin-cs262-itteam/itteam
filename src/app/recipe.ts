@@ -31,6 +31,7 @@ export class Recipe {
         this._nratings = 0;
         this._imgPath = img;
     }
+    //TODO: Explicit constructor to load class from db
 
     /**
      * Rate the recipe. Currently doesn't track specific ratings, just calculates an average using the previous ratings,

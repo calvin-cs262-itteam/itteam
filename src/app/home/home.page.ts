@@ -9,6 +9,8 @@ import { R3ExpressionFactoryMetadata } from '@angular/compiler/src/render3/r3_fa
 })
 export class HomePage {
 
+  IMG_PATH = "../../assets/images/"
+
   exampleRecipe : Recipe;
   example : Recipe;
   pretzel : Recipe;
@@ -33,7 +35,7 @@ export class HomePage {
     this.pretzel = new Recipe(
       "Soft Pretzels", 
       "A simple homemade soft pretzel recipe. It takes about 40 minutes in total. This makes 12 pretzels.",
-      "",
+      this.IMG_PATH + "pretzels.jpg",
       [],
       []
     );

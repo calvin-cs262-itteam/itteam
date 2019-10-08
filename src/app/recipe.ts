@@ -36,6 +36,7 @@ export class Recipe {
         this._description = desc;
         this._rating = 0;
         this._nratings = 0;
+        this._rating_list = [];
         this._imgPath = img;
         this._ingredients = ingrdntList;
         this._instructions = instrList;

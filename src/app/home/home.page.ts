@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Recipe } from '../recipe';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  exampleRecipe : Recipe;
+
+  constructor() {
+    this.exampleRecipe = new Recipe("Name", "A very cool description", "path/to/img", ["List", "of", "instructions"], ["List", "of", "ingredients"]);
+  }
 
 }

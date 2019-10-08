@@ -20,6 +20,8 @@ export class Recipe {
     get rating() : number { return this._rating }
     get nratings() : number { return this._nratings }
     get imgPath() : string { return this._imgPath }
+    get ingredients() : string[] { return this._ingredients }
+    get instructions() : string[] { return this._instructions }
 
     /**
      * The constructor doesn't get rating info because ratings start unrated.
@@ -27,12 +29,14 @@ export class Recipe {
      * @param desc Description of the recipe.
      * @param img Path to the image of the recipe.
      */
-    constructor(name:string, desc:string, img:string) {
+    constructor(name:string, desc:string, img:string, instrList:string[], ingrdntList:string[]) {
         this._name = name;
         this._description = desc;
         this._rating = 0;
         this._nratings = 0;
         this._imgPath = img;
+        this._ingredients = ingrdntList;
+        this._instructions = instrList;
     }
     //TODO: Explicit constructor to load class from db
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Recipe } from '../recipe';
+import { R3ExpressionFactoryMetadata } from '@angular/compiler/src/render3/r3_factory';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +10,33 @@ import { Recipe } from '../recipe';
 export class HomePage {
 
   exampleRecipe : Recipe;
+  example : Recipe;
+  pretzel : Recipe;
 
   constructor() {
-    this.exampleRecipe = new Recipe("Name", "A very cool description", "path/to/img", ["List", "of", "instructions"], ["List", "of", "ingredients"]);
+    this.exampleRecipe = new Recipe(
+      "Name", 
+      "A very cool description", 
+      "path/to/img", 
+      ["List", "of", "instructions"], 
+      ["List", "of", "ingredients"]
+      );
+
+    this.example = new Recipe(
+      "", 
+      "",
+      "",
+      [],
+      []
+    )
+
+    this.pretzel = new Recipe(
+      "Soft Pretzels", 
+      "A simple homemade soft pretzel recipe",
+      "",
+      [],
+      []
+    );
   }
 
 }

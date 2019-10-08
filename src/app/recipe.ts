@@ -17,7 +17,7 @@ export class Recipe {
     // getters
     get name() : string { return this._name }
     get description() : string { return this._description }
-    get rating() : number { return this._rating }
+    get rating() : string { return this._rating.toPrecision(2) }
     get nratings() : number { return this._nratings }
     get imgPath() : string { return this._imgPath }
     get ingredients() : string[] { return this._ingredients }

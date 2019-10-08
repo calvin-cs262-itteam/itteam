@@ -2,14 +2,14 @@
  * Recipe class.
  */
 export class Recipe {
-    private _name : string;          // The name of the recipe
-    private _description : string;   // a description of the recipe
-    private _rating : number;        // Rating
-    private _rating_list : number[]; // List of ratings
-    private _nratings : number;      // The total number of ratings (used to calculate average)
-    private _imgPath : string;       // Path to image of recipe
-    private _ingredients : string[]; // Ingredient list
-    private _instructions : string[];// Instruction list
+    private _name : string;             // The name of the recipe
+    private _description : string;      // a description of the recipe
+    private _rating : number;           // Rating
+    private _rating_list : number[];    // List of ratings
+    private _nratings : number;         // The total number of ratings (used to calculate average)
+    private _imgPath : string;          // Path to image of recipe
+    private _ingredients : string[];    // Ingredient list
+    private _instructions : string[];   // Instruction list
     //TODO: Ingredients, instructions
     //TODO: add tags
     //TODO: We'll probably want a rating class in the future so we can tie specific ratings to users, but for now we can use numbers

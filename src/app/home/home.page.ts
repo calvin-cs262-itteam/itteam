@@ -32,7 +32,7 @@ export class HomePage {
 
     this.pretzel = new Recipe(
       "Soft Pretzels", 
-      "A simple homemade soft pretzel recipe",
+      "A simple homemade soft pretzel recipe. It takes about 40 minutes in total. This makes 12 pretzels.",
       "",
       [],
       []

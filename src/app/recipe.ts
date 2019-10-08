@@ -28,6 +28,8 @@ export class Recipe {
      * @param name Name of the recipe.
      * @param desc Description of the recipe.
      * @param img Path to the image of the recipe.
+     * @param instrList List of instructions.
+     * @param ingrdntList List of ingredients.
      */
     constructor(name:string, desc:string, img:string, instrList:string[], ingrdntList:string[]) {
         this._name = name;

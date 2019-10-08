@@ -35,7 +35,7 @@ export class HomePage {
       "A simple homemade soft pretzel recipe. It takes about 40 minutes in total. This makes 12 pretzels.",
       "",
       [],
-      []
+      ["1,1/2"]
     );
   }
 

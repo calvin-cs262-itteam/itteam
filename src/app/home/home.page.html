@@ -32,16 +32,16 @@
             </ion-card-content> 
         </ion-card>
         <ion-card>
-            <img src = "assets/mr_bean.jpg" style ="height: 400px;width:400px;"/>
-
+            <img src = "{{pretzel.imgPath}}" style ="height: 400px;width:400px;"/>
             <ion-card-header>
               <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-              <ion-card-title>Card Title</ion-card-title>
+              <ion-card-title>
+                <span [innerHTML] = "pretzel.name"></span>
+              </ion-card-title>
             </ion-card-header>
           
             <ion-card-content>
-              mr bean mr bean mr bean mr bean mr bean mr bean
-              mr bean mr bean mr bean
+              <span [innerHTML] = "pretzel.description" ></span>
             </ion-card-content> 
         </ion-card>
       </ion-content>

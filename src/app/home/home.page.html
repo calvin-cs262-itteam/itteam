@@ -1,25 +1,49 @@
-<ion-header>
-    <ion-title>
-      Home
-    </ion-title>
-</ion-header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <style>
+    :root {
+      --ion-safe-area-top: 20px;
+      --ion-safe-area-bottom: 22 px;
+    }
+  </style>
+  </head>
 
-<div class="ion-padding">
-  <p>Click Recipe</p>
-</div>
+<body>
+  <ion-app>
+    <ion-header translucent>
+      <ion-toolbar>
+        <ion-title>Card</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-card>
+            <img src = "assets/mr_bean.jpg" style ="height: 400px;width:fullscreen;"/>
 
+            <ion-card-header>
+              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+              <ion-card-title>Card Title</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content>
+              mr bean mr bean mr bean mr bean mr bean mr bean
+              mr bean mr bean mr bean
+            </ion-card-content> 
+        </ion-card>
+        <ion-card>
+            <img src = "assets/mr_bean.jpg" style ="height: 400px;width:400px;"/>
 
-<ion-card>
-    <img src = "assets/mr_bean.jpg" style ="height: 500px;width:500px;"/>
-
-    <ion-card-header>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-      <ion-card-title>Card Title</ion-card-title>
-    </ion-card-header>
-  
-    <ion-card-content>
-      mr bean mr bean mr bean mr bean mr bean mr bean
-      mr bean mr bean mr bean
-    </ion-card-content>  
-
-</ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+              <ion-card-title>Card Title</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content>
+              mr bean mr bean mr bean mr bean mr bean mr bean
+              mr bean mr bean mr bean
+            </ion-card-content> 
+        </ion-card>
+      </ion-content>
+  </ion-app>
+</body>

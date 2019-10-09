@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Recipe } from '../recipe';
 import { R3ExpressionFactoryMetadata } from '@angular/compiler/src/render3/r3_factory';
-
+/**import from '../recipe.spec.ts';
+*/
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',

@@ -9,4 +9,6 @@ export class Rating {
     get score() : number {return this._score}
     get userid() : number {return this._userid}
     get comment() : string {return this._comment}
+
+    set comment(new_comment : string) {this._comment = new_comment}
 }

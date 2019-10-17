@@ -1,0 +1,20 @@
+Usability:
+- The basic tasks of EasyEats will be to browse for recipes and their ingredients/instructions, filter recipe results with
+  tags, review and comment on recipes, be able to upvote/downvote suggestions, be able to post suggestions on recipe steps,
+  and support login and account functionality.
+- The interface will be simplisitc an familiar to support ease of use. The itteam will derive inspiration from other popular
+  recipe apps to create familiarity with users.
+- The interface will have a logical layout, with users being able to easily discern the function of buttons. Buttons and
+  other functions are labeled with small graphics or phrases (ie. searchbar contains placeholder text 'find a recipe...' and
+  upvote and downvote buttons next to comments are small arrows).
+Reliability:
+- Basic functions - recipe search, review recipe, comment, upvote/downvote, etc will work as intended and will be fixed if they
+  have any errors.
+- the app will work as long as the user has internet and as long as there is no problems on the EasyEats side of things
+  (retrieving recipe data, etc).
+Performance:
+- As long as a stable network connection exixts, EasyEats will run quickly and smoothly. Loading times should not exceed 5
+  seconds.
+Supportability:
+- EasyEats will be available on both the Google Play Store and the App Store.
+- Any app failures will be corrected by the itteam within 48 hours of the problem occurring.

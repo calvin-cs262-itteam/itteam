@@ -1,13 +1,113 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      IT Team
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <div class="ion-padding">
-    <p>Hello, IT Team!</p>
-  </div>
-</ion-content>
+<body>
+  <ion-app>
+    <ion-header translucent>
+      <ion-toolbar text-center>
+        <ion-title>Featured Recipes</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+                <ion-card>
+                   <img src = "{{deconstucted_chicken_pot_pie.imgPath}}" style ="height: 200px;width:200px;"/>
+                    <ion-card-header>
+                      <ion-card-title><span [innerHTML] = "deconstucted_chicken_pot_pie.name"></span></ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                      <span [innerHTML] = "deconstucted_chicken_pot_pie.description"></span>
+                    </ion-card-content> 
+                </ion-card>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-card>
+                  <img src = "{{pretzel.imgPath}}" style ="height: 200px;width:200px;"/>
+                  <ion-card-header>
+                    <ion-card-title>
+                      <span [innerHTML] = "pretzel.name"></span>
+                    </ion-card-title>
+                  </ion-card-header>
+                
+                  <ion-card-content>
+                    <span [innerHTML] = "pretzel.description" ></span>
+                  </ion-card-content> 
+              </ion-card>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <div>
+                  <ion-card>
+                      <img src = "{{eggs_benidict.imgPath}}" style ="height: 200px;width:200px;"/>
+                      <ion-card-header>
+                        <ion-card-title>
+                          <span [innerHTML] = "eggs_benidict.name"></span>
+                        </ion-card-title>
+                      </ion-card-header>
+                    
+                      <ion-card-content>
+                        <span [innerHTML] = "eggs_benidict.description" ></span>
+                      </ion-card-content> 
+                  </ion-card>
+                </div>
+              </ion-col>
+              <ion-col>
+                  <div>
+                    <ion-card>
+                        <img src = "{{instant_ramen.imgPath}}" style ="height: 200px;width:200px;"/>
+                        <ion-card-header>
+                          <ion-card-title>
+                            <span [innerHTML] = "instant_ramen.name"></span>
+                          </ion-card-title>
+                        </ion-card-header>
+                      
+                        <ion-card-content>
+                          <span [innerHTML] = "instant_ramen.description" ></span>
+                        </ion-card-content> 
+                    </ion-card>
+                  </div>
+                </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <div>
+                  <ion-card>
+                      <img src = "{{tuna_casserole.imgPath}}" style ="height: 200px;width:200px;"/>
+                      <ion-card-header>
+                        <ion-card-title>
+                          <span [innerHTML] = "tuna_casserole.name"></span>
+                        </ion-card-title>
+                      </ion-card-header>
+                    
+                      <ion-card-content>
+                        <span [innerHTML] = "tuna_casserole.description" ></span>
+                      </ion-card-content> 
+                  </ion-card>
+                </div>
+              </ion-col>
+              <ion-col>
+                  <div>
+                    <ion-card>
+                        <img src = "{{moroccan_pastitsio.imgPath}}" style ="height: 200px;width:200px;"/>
+                        <ion-card-header>
+                          <ion-card-title>
+                            <span [innerHTML] = "moroccan_pastitsio.name"></span>
+                          </ion-card-title>
+                        </ion-card-header>
+                      
+                        <ion-card-content>
+                          <span [innerHTML] = "moroccan_pastitsio.description" ></span>
+                        </ion-card-content> 
+                    </ion-card>
+                  </div>
+                </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      </ion-content>
+  </ion-app>
+</body>

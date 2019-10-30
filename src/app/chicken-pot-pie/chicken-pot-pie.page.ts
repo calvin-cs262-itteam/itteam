@@ -13,6 +13,7 @@ export class ChickenPotPiePage implements OnInit {
 
   showSuggestions() {
     //this placeholder
+    // I think an ion-popover is what is needed
   }
 
   constructor() { 

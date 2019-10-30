@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Chicken Pot Pie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <img src="{{deconstucted_chicken_pot_pie.imgPath}}"/>
+
+  <ion-list *ngFor="let instruction of deconstucted_chicken_pot_pie.instructions">
+    <ion-item (click)="showSuggestions()"> {{instruction}} </ion-item>
+  </ion-list>
+
+</ion-content>

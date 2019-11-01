@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Chicken Pot Pie</ion-title>
+    <ion-title>Pretzel</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,9 +9,9 @@
 
     <ion-slide> 
       <div>
-    <img src="{{deconstructed_chicken_pot_pie.imgPath}}" style ="height: 300px;width:300px;"/>
+    <img src="{{pretzel.imgPath}}" style ="height: 300px;width:300px;"/>
 
-    <ion-list *ngFor="let instruction of deconstructed_chicken_pot_pie.instructions">
+    <ion-list *ngFor="let instruction of pretzel.instructions">
       <ion-item (click)="showSuggestions()"> {{instruction}} </ion-item>
     </ion-list>
     </div>
@@ -20,7 +20,7 @@
   <ion-slide>
     <div>
     <h1>Ingredients</h1>
-      <ion-list *ngFor="let ingredient of deconstructed_chicken_pot_pie.ingredients">
+      <ion-list *ngFor="let ingredient of pretzel.ingredients">
           <ion-item> {{ingredient}} </ion-item>
       </ion-list> 
     </div>

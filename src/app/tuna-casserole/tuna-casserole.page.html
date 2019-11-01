@@ -12,7 +12,7 @@
     <img src="{{tuna_casserole.imgPath}}" style ="height: 300px;width:300px;"/>
 
     <ion-list *ngFor="let instruction of tuna_casserole.instructions">
-      <ion-item (click)="showSuggestions()"> {{instruction}} </ion-item>
+      <ion-item button (click)="showSuggestions()"> {{instruction}} </ion-item>
     </ion-list>
     </div>
   </ion-slide>
@@ -21,7 +21,7 @@
     <div>
     <h1>Ingredients</h1>
       <ion-list *ngFor="let ingredient of tuna_casserole.ingredients">
-          <ion-item> {{ingredient}} </ion-item>
+          <ion-item button> {{ingredient}} </ion-item>
       </ion-list> 
     </div>
   </ion-slide>

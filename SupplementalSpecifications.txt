@@ -17,4 +17,3 @@ Performance:
   seconds.
 Supportability:
 - EasyEats will be available on both the Google Play Store and the App Store.
-- Any app failures will be corrected by the itteam within 48 hours of the problem occurring.

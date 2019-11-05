@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Moroccan Pastitsio</ion-title>
+    <ion-button href = "../home"><ion-icon name="arrow-back"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides>
+
+    <ion-slide> 
+      <div>
+    <img src="{{moroccan_pastitsio.imgPath}}" style ="height: 300px;width:300px;"/>
+
+    <ion-list *ngFor="let instruction of moroccan_pastitsio.instructions">
+      <ion-item button (click)="showSuggestions()"> {{instruction}} </ion-item>
+    </ion-list>
+    </div>
+  </ion-slide>
+
+  <ion-slide>
+    <div>
+    <h1>Ingredients</h1>
+      <ion-list *ngFor="let ingredient of moroccan_pastitsio.ingredients">
+          <ion-item button> {{ingredient}} </ion-item>
+      </ion-list> 
+    </div>
+  </ion-slide>
+
+</ion-slides>
+</ion-content>

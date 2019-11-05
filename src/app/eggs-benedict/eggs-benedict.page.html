@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Eggs Benedict</ion-title>
+    <ion-button href = "../home"><ion-icon name="arrow-back"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides>
+
+    <ion-slide> 
+      <div>
+    <img src="{{eggs_benedict.imgPath}}" style ="height: 300px;width:300px;"/>
+
+    <ion-list *ngFor="let instruction of eggs_benedict.instructions">
+      <ion-item button (click)="showSuggestions()"> {{instruction}} </ion-item>
+    </ion-list>
+    </div>
+  </ion-slide>
+
+  <ion-slide>
+    <div>
+    <h1>Ingredients</h1>
+      <ion-list *ngFor="let ingredient of eggs_benedict.ingredients">
+          <ion-item button> {{ingredient}} </ion-item>
+      </ion-list> 
+    </div>
+  </ion-slide>
+
+</ion-slides>
+</ion-content>

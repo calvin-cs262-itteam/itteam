@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Recipe } from '../recipe';
+import { Recipe } from '../interfaces/recipe';
 import { R3ExpressionFactoryMetadata } from '@angular/compiler/src/render3/r3_factory';
 
 @Component({

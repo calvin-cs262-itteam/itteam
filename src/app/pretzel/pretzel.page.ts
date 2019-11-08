@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 import { Recipe } from '../interfaces/recipe';
 
 @Component({
@@ -16,7 +17,7 @@ export class PretzelPage implements OnInit {
     // I think an ion-popover is what is needed
   }
 
-  constructor() { 
+  constructor(private menu: MenuController) { 
 
     this.pretzel = new Recipe(
       "Soft Pretzels", 
@@ -45,6 +46,11 @@ export class PretzelPage implements OnInit {
        "1/2 cup baking soda in 9 cups water"]
     );
 
+  }
+
+  openFirst() {
+    this.menu.enable(true, 'menu4');
+    this.menu.open('menu4');
   }
 
   ngOnInit() {

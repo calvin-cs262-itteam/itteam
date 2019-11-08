@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Recipe } from '../interfaces/recipe';
 import { R3ExpressionFactoryMetadata } from '@angular/compiler/src/render3/r3_factory';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -20,7 +21,8 @@ export class HomePage {
   moroccan_pastitsio : Recipe;
   tuna_casserole : Recipe;
 
-  constructor() {
+  constructor(private menu: MenuController) {
+    
     this.exampleRecipe = new Recipe(
       "Name", 
       "A very cool description", 
@@ -195,6 +197,11 @@ export class HomePage {
        "1 1/2 cups, french fried onions"]
     );
 
+  }
+
+  openFirst() {
+    this.menu.enable(true, 'first');
+    this.menu.open('first');
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 import { Recipe } from '../interfaces/recipe';
 
 @Component({
@@ -16,7 +17,7 @@ export class RamenPage implements OnInit {
     // I think an ion-popover is what is needed
   }
 
-  constructor() { 
+  constructor(private menu: MenuController) { 
 
     this.instant_ramen = new Recipe(
       "Instant Ramen for Adults",
@@ -31,6 +32,11 @@ export class RamenPage implements OnInit {
        "1 cup sliced cooked chicken breast"]
     )
 
+  }
+
+  openFirst() {
+    this.menu.enable(true, 'menu5');
+    this.menu.open('menu5');
   }
 
   ngOnInit() {

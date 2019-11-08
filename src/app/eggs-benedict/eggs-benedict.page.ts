@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 import { Recipe } from '../interfaces/recipe';
 
 @Component({
@@ -16,11 +17,11 @@ export class EggsBenedictPage implements OnInit {
     // I think an ion-popover is what is needed
   }
 
-  constructor() { 
+  constructor(private menu: MenuController) { 
 
     this.eggs_benedict = new Recipe(
       "Eggs Benedict", 
-      "Creates 4 servings. Takes 35 minutes.",
+      "A fresh take on the classic breakfast. Makes 4 servings. Takes 35 minutes.",
       this.IMG_PATH + "eggs_benedict.jpg",
 
       ["Melt 12 tablespoons of butter in small pot till foamy, 3-4 minutes",
@@ -31,7 +32,7 @@ export class EggsBenedictPage implements OnInit {
        "Stir in clockwise motion",
        "For up to 4 eggs,gently crack 1 egg into center allowing water to swirl until yolk covered then next egg",
        "Continue poaching for about 4-5 minutes then set aside",
-       "Tost english muffins",
+       "Toast english muffins",
        "Cook canadian bacon/ham in skillet for about 6 minuts on medium-high heat",
        "Butter muffin, top with meat, poached egg, then sauce", 
        "Season with chives, dill, salt and pepper"],
@@ -49,6 +50,11 @@ export class EggsBenedictPage implements OnInit {
        "salt and ground pepper"]
     );
 
+  }
+
+  openFirst() {
+    this.menu.enable(true, 'menu2');
+    this.menu.open('menu2');
   }
 
   ngOnInit() {

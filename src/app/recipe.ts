@@ -41,6 +41,7 @@ export class Recipe {
         this._rating_list = [];
         this._imgPath = img;
         this._ingredients = ingrdntList;
+        this._instructions = [];
         for (let instr of instrList) {
             this._instructions.push(new Instruction(instr))
         }

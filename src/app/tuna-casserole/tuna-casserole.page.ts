@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../recipe'
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tuna-casserole',
@@ -16,7 +17,7 @@ export class TunaCasserolePage implements OnInit {
     // I think an ion-popover is what is needed
   }
 
-  constructor() {
+  constructor(private menu: MenuController) {
 
     this.tuna_casserole = new Recipe(
       "Easy Tuna Casserole", 
@@ -37,6 +38,11 @@ export class TunaCasserolePage implements OnInit {
     );
 
    }
+
+  openFirst() {
+    this.menu.enable(true, 'menu6');
+    this.menu.open('menu6');
+  }
 
   ngOnInit() {
   }

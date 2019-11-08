@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../recipe';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-moroccan-pastitsio',
@@ -16,7 +17,7 @@ export class MoroccanPastitsioPage implements OnInit {
     // I think an ion-popover is what is needed
   }
 
-  constructor() { 
+  constructor(private menu: MenuController) { 
 
     this.moroccan_pastitsio = new Recipe(
       "Moroccan Pastisio", 
@@ -66,6 +67,11 @@ export class MoroccanPastitsioPage implements OnInit {
        "1/2 cup, grated parmesan cheese"]
     );
 
+  }
+
+  openFirst() {
+    this.menu.enable(true, 'menu3');
+    this.menu.open('menu3');
   }
 
   ngOnInit() {

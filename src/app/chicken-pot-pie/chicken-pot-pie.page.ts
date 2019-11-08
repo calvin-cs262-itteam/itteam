@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../recipe';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-chicken-pot-pie',
@@ -16,7 +17,7 @@ export class ChickenPotPiePage implements OnInit {
     // I think an ion-popover is what is needed
   }
 
-  constructor() { 
+  constructor(private menu: MenuController) { 
 
     this.deconstructed_chicken_pot_pie = new Recipe(
       "Deconstructed Chicken Pot Pie",
@@ -41,7 +42,14 @@ export class ChickenPotPiePage implements OnInit {
 
   }
 
+  openFirst() {
+    this.menu.enable(true, 'menu1');
+    this.menu.open('menu1');
+  }
+
   ngOnInit() {
   }
+
+  
 
 }

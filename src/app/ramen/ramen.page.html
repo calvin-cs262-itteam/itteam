@@ -12,8 +12,8 @@
       <div>
     <img src="{{instant_ramen.imgPath}}" style ="height: 300px;width:300px;"/>
 
-    <ion-list *ngFor="let instruction of instant_ramen.instructions">
-      <ion-item button (click)="showSuggestions()"> {{instruction}} </ion-item>
+    <ion-list *ngFor="let instr of instant_ramen.instructions">
+      <ion-item button (click)="showSuggestions()"> {{instr.instruction}} </ion-item>
     </ion-list>
     </div>
   </ion-slide>

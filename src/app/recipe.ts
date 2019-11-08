@@ -1,3 +1,5 @@
+import { Instruction } from './instruction';
+// alright relode for me
 /**
  * Recipe class.
  */
@@ -9,7 +11,7 @@ export class Recipe {
     private _nratings : number;         // The total number of ratings (used to calculate average)
     private _imgPath : string;          // Path to image of recipe
     private _ingredients : string[];    // Ingredient list
-    private _instructions : string[];   // Instruction list
+    private _instructions : Instruction[];   // Instruction list
     //TODO: Ingredients, instructions
     //TODO: add tags
     //TODO: We'll probably want a rating class in the future so we can tie specific ratings to users, but for now we can use numbers
@@ -21,7 +23,7 @@ export class Recipe {
     get nratings() : number { return this._nratings }
     get imgPath() : string { return this._imgPath }
     get ingredients() : string[] { return this._ingredients }
-    get instructions() : string[] { return this._instructions }
+    get instructions() : Instruction[] { return this._instructions }
 
     /**
      * The constructor doesn't get rating info because ratings start unrated.
@@ -39,7 +41,9 @@ export class Recipe {
         this._rating_list = [];
         this._imgPath = img;
         this._ingredients = ingrdntList;
-        this._instructions = instrList;
+        for (let instr of instrList) {
+            this._instructions.push(new Instruction(instr))
+        }
     }
     //TODO: Explicit constructor to load class from db
 

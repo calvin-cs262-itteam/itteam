@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Recipe } from '../recipe';
 import { MenuController } from '@ionic/angular';
+import { Recipe } from '../interfaces/recipe';
 
 @Component({
   selector: 'app-moroccan-pastitsio',

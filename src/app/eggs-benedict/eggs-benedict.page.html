@@ -13,7 +13,7 @@
     <img src="{{eggs_benedict.imgPath}}" style ="height: 300px;width:300px;"/>
 
     <ion-list *ngFor="let instr of eggs_benedict.instructions">
-      <ion-item button (click)="showSuggestions()"> {{instr.instruction}} </ion-item>
+      <ion-item button (click)="showSuggestions(instr)"> {{instr.instruction}} </ion-item>
     </ion-list>
     </div>
   </ion-slide>

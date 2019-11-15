@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Recipe } from '../recipe'
+import { PopoverController } from '@ionic/angular';
+import { PopoverComponent} from '../popover/popover.component';
+import { Recipe } from '../recipe';
+import { Instruction } from '../instruction';
 
 @Component({
   selector: 'app-tuna-casserole',
@@ -11,12 +14,7 @@ export class TunaCasserolePage implements OnInit {
   IMG_PATH = "../../assets/images/"
   tuna_casserole : Recipe;
 
-  showSuggestions() {
-    //this placeholder
-    // I think an ion-popover is what is needed
-  }
-
-  constructor() {
+  constructor(private popCont: PopoverController) {
 
     this.tuna_casserole = new Recipe(
       "Easy Tuna Casserole", 
@@ -37,6 +35,15 @@ export class TunaCasserolePage implements OnInit {
     );
 
    }
+
+   async showSuggestions(instr : Instruction) {
+    const popover = await this.popCont.create({
+        component : PopoverComponent,
+        componentProps : {instr : instr},
+        translucent : true
+    });
+    return await popover.present();
+    }
 
   ngOnInit() {
   }

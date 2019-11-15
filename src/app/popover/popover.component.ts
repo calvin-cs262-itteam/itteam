@@ -10,12 +10,15 @@ import { Instruction } from '../instruction';
 export class PopoverComponent implements OnInit {
   page;
   instr : Instruction;
+  givenSug : string
 
   constructor(private popConp : PopoverController, public navParams: NavParams) {
     this.instr = this.navParams.get('instr')
    }
 
-   addSug() {}
+   addSug() {
+     this.instr.addSuggestion(this.givenSug);
+   }
 
   ngOnInit() {}
 

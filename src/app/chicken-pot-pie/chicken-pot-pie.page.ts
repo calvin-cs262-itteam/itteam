@@ -36,11 +36,6 @@ export class ChickenPotPiePage implements OnInit {
        "1 lemon wedge", 
        "Biscuits, for serving"]
     )
-
-    for(let instr of this.deconstructed_chicken_pot_pie.instructions) {
-      instr.addSuggestion("I exist, you twat.");
-    }
-
   }
 
   async showSuggestions(instr : Instruction) {

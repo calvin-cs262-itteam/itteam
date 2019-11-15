@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { PopoverController } from '@ionic/angular';
+import { PopoverComponent} from '../popover/popover.component';
 import { Recipe } from '../recipe';
+import { Instruction } from '../instruction';
 
 @Component({
   selector: 'app-moroccan-pastitsio',
@@ -11,12 +14,7 @@ export class MoroccanPastitsioPage implements OnInit {
   IMG_PATH = "../../assets/images/"
   moroccan_pastitsio : Recipe;
 
-  showSuggestions() {
-    //this placeholder
-    // I think an ion-popover is what is needed
-  }
-
-  constructor() { 
+  constructor(private popCont: PopoverController) { 
 
     this.moroccan_pastitsio = new Recipe(
       "Moroccan Pastisio", 
@@ -67,6 +65,15 @@ export class MoroccanPastitsioPage implements OnInit {
     );
 
   }
+
+  async showSuggestions(instr : Instruction) {
+    const popover = await this.popCont.create({
+        component : PopoverComponent,
+        componentProps : {instr : instr},
+        translucent : true
+    });
+    return await popover.present();
+    }
 
   ngOnInit() {
   }

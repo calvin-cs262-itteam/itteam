@@ -1,6 +1,6 @@
 <ion-content>
-  <ion-button (click) = addSug() >New Suggestion</ion-button>
-  <ion-input spellcheck="true" type="text"></ion-input>
+  <ion-input spellcheck="true" type="text" [(ngModel)]="givenSug"></ion-input>
+  <ion-button (click) = addSug() >Add Suggestion</ion-button>
   <ion-list *ngFor="let sug of instr.suggestions">
     <ion-item> {{sug}} </ion-item>
 </ion-list> 

@@ -146,9 +146,44 @@
                     </ion-card>
                   </div>
                 </ion-col>
+              </ion-row>
+                <ion-row>
+                  <ion-col>
+                      <div>
+                        <ion-card color = "light" button href = "../cheesecake">
+                            <img src = "{{cheesecake.imgPath}}" style ="height: 200px;width:200px;"/>
+                            <ion-card-header>
+                              <ion-card-title>
+                                <span [innerHTML] = "cheesecake.name"></span>
+                              </ion-card-title>
+                            </ion-card-header>
+                          
+                            <ion-card-content>
+                              <span [innerHTML] = "cheesecake.description" ></span>
+                            </ion-card-content> 
+                        </ion-card>
+                      </div>
+                    </ion-col>
+                    <ion-col>
+                      <div>
+                        <ion-card color = "light" button href = "../quesillo">
+                            <img src = "{{quesillo.imgPath}}" style ="height: 200px;width:200px;"/>
+                            <ion-card-header>
+                              <ion-card-title>
+                                <span [innerHTML] = "quesillo.name"></span>
+                              </ion-card-title>
+                            </ion-card-header>
+                          
+                            <ion-card-content>
+                              <span [innerHTML] = "quesillo.description" ></span>
+                            </ion-card-content> 
+                        </ion-card>
+                      </div>
+                    </ion-col>
+
         </ion-row>
       </ion-grid>
       
-      </ion-content>
+    </ion-content>
   </ion-app>
 </body>

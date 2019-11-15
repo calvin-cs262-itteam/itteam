@@ -1,0 +1,7 @@
+<ion-content>
+  <ion-button (click) = addSug() >New Suggestion</ion-button>
+  <ion-input spellcheck="true" type="text"></ion-input>
+  <ion-list *ngFor="let sug of instr.suggestions">
+    <ion-item> {{sug}} </ion-item>
+</ion-list> 
+</ion-content>

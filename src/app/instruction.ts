@@ -4,7 +4,7 @@
 
 export class Instruction {
     private _instruction : string; // the instruction itself
-    private _suggestions : string[]; // list of suggestions for instruction
+    private _suggestions : string[] = []; // list of suggestions for instruction
 
     constructor (instruction : string) {this._instruction = instruction;}
 

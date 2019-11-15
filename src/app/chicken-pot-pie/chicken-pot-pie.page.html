@@ -13,7 +13,7 @@
     <img src="{{deconstructed_chicken_pot_pie.imgPath}}" style ="height: 300px;width:300px;"/>
 
     <ion-list *ngFor="let instr of deconstructed_chicken_pot_pie.instructions">
-      <ion-item button (click)="showSuggestions()"> {{instr.instruction}} </ion-item>
+      <ion-item button (click)="showSuggestions(instr)"> {{instr.instruction}} </ion-item>
     </ion-list>
     </div>
   </ion-slide>

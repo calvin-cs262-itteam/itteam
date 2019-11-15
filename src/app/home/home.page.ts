@@ -67,7 +67,7 @@ export class HomePage {
       ['1) Bring 2 cups of water to a boil in a small pot over high heat. Reduce the heat to medium and add the ramen noodles, frozen veggies, turmeric, 1/2 teaspoon of the ramen seasoning, and 1/2 teaspoon salt; stir to combine. Return the water to a boil and cook until the veggies are crisp-tender with some bite, about 3 minutes.',
       '2) Add the chicken and cook until just warmed through, about 1 minute. Remove from the heat and ladle the vegetables, chicken, and noodles into a bowl. Pour the broth over the top and serve.'],
       ['1 (3-ounce) package instant ramen (any flavor), seasoning packet reserved',
-       '1 cup mixed fozen vegetables',
+       '1 cup mixed frozen vegetables',
        '1 teaspoon ground turmeric',
        '1/2 teaspoon Kosher salt',
        '1 cup sliced cooked chicken breast']

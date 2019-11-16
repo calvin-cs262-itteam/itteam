@@ -18,7 +18,7 @@ const STORAGE_KEY ="my_images";
 })
 export class CheesecakePage implements OnInit {
 
-  /*images = [];*/
+  images = [];
 
   IMG_PATH = "../../assets/images/"
   cheesecake : Recipe;

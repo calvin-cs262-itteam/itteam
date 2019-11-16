@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'eggs-benedict', loadChildren: './eggs-benedict/eggs-benedict.module#EggsBenedictPageModule' },
   { path: 'moroccan-pastitsio', loadChildren: './moroccan-pastitsio/moroccan-pastitsio.module#MoroccanPastitsioPageModule' },
   { path: 'tuna-casserole', loadChildren: './tuna-casserole/tuna-casserole.module#TunaCasserolePageModule' },
+  { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
 ];
 
 @NgModule({

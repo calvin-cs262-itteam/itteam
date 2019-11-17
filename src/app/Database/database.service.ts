@@ -13,8 +13,18 @@ import mongoose, {Schema} from 'mongoose';
 export class DatabaseService {
   private schema: Schema;
   private model;
+  private db;
 
-  constructor(schemaType: string) {
+  constructor(schemaType: string, test: boolean) {
+
+    if (test) {
+      mongoose.connect('mongodb+srv://Nate:EasyEats@cluster0-4hwij.mongodb.net/test?retryWrites=true&w=majority',
+        {useNewUrlParser: true, useUnifiedTopology: true});
+    } else {
+      mongoose.connect('mongodb+srv://Nate:EasyEats@cluster0-4hwij.mongodb.net/EasyEatsDatabase?retryWrites=true&w=majority',
+        {useNewUrlParser: true, useUnifiedTopology: true});
+    }
+    this.db = mongoose.connection;
 
     if (schemaType === 'Recipe') {
       this.schema = new Schema({
@@ -34,16 +44,19 @@ export class DatabaseService {
    }
 
   create(data: Array<[string, any]>) {
-    data.forEach(element => {
-      if (element[0] !== this.schema[0]) {
-        throw TypeError('DatabaseService.create(): invalid schema type');
-      }
-    });
+    this.db.on('error', console.error.bind(console, 'connection error:'));
+    this.db.once('open', function() {
+      data.forEach(element => {
+          if (element[0] !== this.schema[0]) {
+          throw TypeError('DatabaseService.create(): invalid schema type');
+        }
+      });
 
-    const entry = new this.model(data);
-    entry.save(function (err) {
-      if (err) { return console.error(err); }
-      console.log('Created document');
+      const entry = new this.model(data);
+      entry.save(function (err) {
+        if (err) { return console.error(err); }
+        console.log('Created document');
+      });
     });
   }
 

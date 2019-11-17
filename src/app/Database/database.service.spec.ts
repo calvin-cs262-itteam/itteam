@@ -9,4 +9,14 @@ describe('DatabaseService', () => {
     const service: DatabaseService = TestBed.get(DatabaseService);
     expect(service).toBeTruthy();
   });
+
+  it('should create document'), () => {
+    let creation = new DatabaseService('Recipe', true);
+    let testRecipeArray = [<[string, any]>['name', 'soup'], <[string, any]>['description', 'yummy'], <[string, any]>['ingredients', ['sauce', 'water']]];
+
+    creation.create(testRecipeArray);
+
+
+  }
 });
+

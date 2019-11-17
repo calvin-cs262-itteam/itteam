@@ -15,7 +15,7 @@ export class DatabaseService {
   private model;
   private db;
 
-  constructor(schemaType: string, test: boolean) {
+  constructor(schemaType: string, test: boolean = false) {
 
     if (test) {
       mongoose.connect('mongodb+srv://Nate:EasyEats@cluster0-4hwij.mongodb.net/test?retryWrites=true&w=majority',

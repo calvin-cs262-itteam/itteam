@@ -11,11 +11,12 @@ import mongoose, {Schema} from 'mongoose';
 
 
 export class DatabaseService {
-  private schema;
-  
-  constructor(schemaType:string){
-    
-    if (schemaType == 'Recipe'){
+  private schema: Schema;
+  private model;
+
+  constructor(schemaType: string) {
+
+    if (schemaType === 'Recipe') {
       this.schema = new Schema({
         name: String,
         description: String,
@@ -23,17 +24,28 @@ export class DatabaseService {
       });
     }
 
-    if (schemaType == 'User'){
+    if (schemaType === 'User') {
       this.schema = new Schema({
-        username:{type: String, unique: true, requiried: true}, 
+        username: {type: String, unique: true, requiried: true},
         password: String
       });
     }
+    this.model = mongoose.model(schemaType, this.schema);
    }
-  
-  create(){
 
-  } 
+  create(data: Array<[string, any]>) {
+    data.forEach(element => {
+      if (element[0] !== this.schema[0]) {
+        throw TypeError('DatabaseService.create(): invalid schema type');
+      }
+    });
+
+    const entry = new this.model(data);
+    entry.save(function (err) {
+      if (err) { return console.error(err); }
+      console.log('Created document');
+    });
+  }
 
   read(){
 

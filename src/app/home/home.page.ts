@@ -10,7 +10,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class HomePage {
 
-  IMG_PATH = '../../assets/images/'
+  IMG_PATH = '../../assets/images/';
 
   exampleRecipe: Recipe;
   example: Recipe;

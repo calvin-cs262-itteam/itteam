@@ -20,6 +20,8 @@ export class HomePage {
   instantRamen: Recipe;
   moroccanPastitsio: Recipe;
   tunaCasserole: Recipe;
+  cheesecake: Recipe;
+  quesillo: Recipe;
 
   constructor(private menu: MenuController) {
 

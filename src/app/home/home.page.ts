@@ -10,7 +10,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class HomePage {
 
-  IMG_PATH = '../../assets/images/'
+  IMG_PATH = '../../assets/images/';
 
   exampleRecipe: Recipe;
   example: Recipe;
@@ -20,6 +20,8 @@ export class HomePage {
   instantRamen: Recipe;
   moroccanPastitsio: Recipe;
   tunaCasserole: Recipe;
+  cheesecake: Recipe;
+  quesillo: Recipe;
 
   constructor(private menu: MenuController) {
 

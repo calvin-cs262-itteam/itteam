@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { stringify } from 'querystring';
-import mongoose, {Schema} from 'mongoose'; 
-
+//import mongoose, {Schema} from 'mongoose'; 
+import * as mongoose from 'mongoose';
+import {Schema} from 'mongoose';
 @Injectable({
   providedIn: 'root'
 })

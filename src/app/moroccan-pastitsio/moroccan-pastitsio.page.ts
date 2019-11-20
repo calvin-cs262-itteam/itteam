@@ -22,7 +22,7 @@ export class MoroccanPastitsioPage implements OnInit {
     this.moroccan_pastitsio = new Recipe(
       "Moroccan Pastisio", 
       "Moroccan spiced pastitsio with lamb and feta. Makes 10 servings. Takes 1 hour and 40 minutes total",
-      this.IMG_PATH + "moroccan_pastitsio.jpg",
+      this.IMG_PATH + "moroccanPastitsio.jpg",
       
       ["In large skillet, heat oil on medium high heat",
        "Add onion and garlic and saute until soft, 5 minutes",

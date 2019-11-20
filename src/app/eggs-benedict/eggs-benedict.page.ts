@@ -22,7 +22,7 @@ export class EggsBenedictPage implements OnInit {
     this.eggs_benedict = new Recipe(
       'Eggs Benedict',
       'A fresh take on the classic breakfast. Makes 4 servings. Takes 35 minutes.',
-      this.IMG_PATH + 'eggs_benedict.jpg',
+      this.IMG_PATH + 'eggsBenedict.jpg',
 
       ['Melt 12 tablespoons of butter in small pot till foamy, 3-4 minutes',
        'Wisk egg yolks with 2 teaspoons water then add 2 tablespoons melted butter till incorporated',

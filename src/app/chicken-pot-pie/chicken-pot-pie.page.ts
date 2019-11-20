@@ -25,7 +25,7 @@ export class ChickenPotPiePage implements OnInit {
       'Deconstructed Chicken Pot Pie',
       'A savory and filling deconstructed chicken pot pie recipe. Serves 3 or 4. Takes about 25 minutes',
       //shows image saved in assets
-      this.IMG_PATH + 'chicken_pot_pie.jpg',
+      this.IMG_PATH + 'chickenPotPie.jpg',
 
       //shows instructions of the recipe
       ['1) Melt 1 tablespoon of the butter in a medium skillet over medium heat Season the chicken with salt and pepper. When the butter has melted, add the chicken and cook, stirring until browned all over, about 2 minutes. Transfer the chicken to a plate.',

@@ -22,7 +22,7 @@ export class TunaCasserolePage implements OnInit {
     this.tuna_casserole = new Recipe(
       "Easy Tuna Casserole", 
       "Prep time: 15 minutes, Cook time: 30 minutes, and Total time: 45 minutes",
-      this.IMG_PATH + "tuna_casserole.jpg",
+      this.IMG_PATH + "tunaCasserole.jpg",
       
       ["Preheat oven to 350 F",
        "Combine macaroni, tuna, and soup in 9x13 baking dish",

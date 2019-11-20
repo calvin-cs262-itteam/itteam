@@ -44,7 +44,7 @@ export class HomePage {
     this.deconstructedChickenPotPie = new Recipe(
       'Deconstructed Chicken Pot Pie',
       'A savory and filling deconstructed chicken pot pie recipe. Serves 3 or 4. Takes about 25 minutes',
-      this.IMG_PATH + 'chicken_pot_pie.jpg',
+      this.IMG_PATH + 'chickenPotPie.jpg',
       ['1) Melt 1 tablespoon of the butter in a medium skillet over medium heat Season the chicken with salt and pepper. When the butter has melted, add the chicken and cook, stirring until browned all over, about 2 minutes. Transfer the chicken to a plate.',
       '2) Melt the remaining 2 tablespoons of butter in the skillet. Add the mushrooms and scallion whites and cook until the mushrooms soften, 3 to 4 minutes. Sprinkle the thyme and flour over the vegetables and stir to coat. Cook for 1 minute to toast the flour a bit, then stir in the broth and cream. Bring to a simmer and add the peas and carrots.',
       '3) Return the chicken and any juices from the plate to the skillet. Simmer until the peas and carrots are heated through and the chicken is fully cooked, about 3 minutes. Add the scallion greens and simmer for 1 minute to wilt them slightly. Finish with a squeeze of lemon juice. Serve with biscuits on top or on the side.'],

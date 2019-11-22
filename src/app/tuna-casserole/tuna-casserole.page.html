@@ -27,8 +27,8 @@
   <div>
     <img src="{{tuna_casserole.imgPath}}" style ="height: 300px;width:300px;"/>
 
-    <ion-list *ngFor="let instruction of tuna_casserole.instructions">
-      <ion-item button (click)="showSuggestions()"> {{instruction}} </ion-item>
+    <ion-list *ngFor="let instr of tuna_casserole.instructions">
+      <ion-item button (click)="showSuggestions(instr)"> {{instr.instruction}} </ion-item>
     </ion-list>
   </div>
 </ion-content>

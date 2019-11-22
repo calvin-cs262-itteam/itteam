@@ -1,16 +1,57 @@
 <body>
   <ion-app>
     <ion-header translucent>
+      <ion-toolbar text-center color = "warning">
+        <ion-title color = "warning">-</ion-title>
+        <ion-searchbar text-left showCancelButton = "focus" placeholder = "Find a recipe!"></ion-searchbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title color = "warning">
+          -
+        </ion-title>
+      </ion-toolbar>
       <ion-toolbar text-center>
         <ion-title>Featured Recipes</ion-title>
       </ion-toolbar>
     </ion-header>
+
+    <ion-menu side="start" menuId="first">
+        <ion-header>
+          <ion-toolbar color="light">
+            <ion-title>Menu</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+          <ion-list>
+            <ion-item>
+              <ion-icon name="home" slot="start"></ion-icon>
+              <ion-label>Home</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="person" slot="start"></ion-icon>
+              <ion-label>Profile</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="star" slot="start"></ion-icon>
+              <ion-label>Favorites</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="settings" slot="start"></ion-icon>
+                <ion-label>Settings</ion-label>
+              </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+
+      <ion-router-outlet main></ion-router-outlet>
+
     <ion-content>
       <ion-grid>
         <ion-row>
           <ion-col>
             <div>
-                <ion-card button href = "../chicken-pot-pie">
+                <ion-card color = "light" button href = "../chicken-pot-pie">
                    <img src = "{{deconstructed_chicken_pot_pie.imgPath}}" style ="height: 200px;width:200px;"/>
                     <ion-card-header>
                       <ion-card-title><span [innerHTML] = "deconstructed_chicken_pot_pie.name"></span></ion-card-title>
@@ -23,7 +64,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <ion-card button href = "../pretzel">
+              <ion-card color = "light" button href = "../pretzel">
                   <img src = "{{pretzel.imgPath}}" style ="height: 200px;width:200px;"/>
                   <ion-card-header>
                     <ion-card-title>
@@ -41,7 +82,7 @@
         <ion-row>
             <ion-col>
                 <div>
-                  <ion-card button href = "../eggs-benedict">
+                  <ion-card color = "light" button href = "../eggs-benedict">
                       <img src = "{{eggs_benedict.imgPath}}" style ="height: 200px;width:200px;"/>
                       <ion-card-header>
                         <ion-card-title>
@@ -57,7 +98,7 @@
               </ion-col>
               <ion-col>
                   <div>
-                    <ion-card button href = "../ramen">
+                    <ion-card color = "light" button href = "../ramen">
                         <img src = "{{instant_ramen.imgPath}}" style ="height: 200px;width:200px;"/>
                         <ion-card-header>
                           <ion-card-title>
@@ -75,7 +116,7 @@
         <ion-row>
             <ion-col>
                 <div>
-                  <ion-card button href = "../tuna-casserole">
+                  <ion-card color = "light" button href = "../tuna-casserole">
                       <img src = "{{tuna_casserole.imgPath}}" style ="height: 200px;width:200px;"/>
                       <ion-card-header>
                         <ion-card-title>
@@ -91,7 +132,7 @@
               </ion-col>
               <ion-col>
                   <div>
-                    <ion-card button href = "../moroccan-pastitsio">
+                    <ion-card color = "light" button href = "../moroccan-pastitsio">
                         <img src = "{{moroccan_pastitsio.imgPath}}" style ="height: 200px;width:200px;"/>
                         <ion-card-header>
                           <ion-card-title>

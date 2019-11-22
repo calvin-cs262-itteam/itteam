@@ -1,31 +1,34 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Instant Ramen</ion-title>
-    <ion-button href = "../home"><ion-icon name="arrow-back"></ion-icon></ion-button>
+  <ion-toolbar color = "light">
+    <ion-title>Instant Ramen for Adults</ion-title>
+    <ion-buttons slot = "end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-button color = "warning" href = "../home"><ion-icon name="arrow-back"></ion-icon></ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-slides>
+<ion-menu side="end" menuId="menu5">
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-title>Ingredients</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list *ngFor="let ingredient of instant_ramen.ingredients">
+      <ion-item button> {{ingredient}} </ion-item>
+    </ion-list> 
+  </ion-content>
+</ion-menu>
+      
+<ion-router-outlet main></ion-router-outlet>
 
-    <ion-slide> 
-      <div>
+<ion-content>
+  <div>
     <img src="{{instant_ramen.imgPath}}" style ="height: 300px;width:300px;"/>
 
     <ion-list *ngFor="let instr of instant_ramen.instructions">
       <ion-item button (click)="showSuggestions(instr)"> {{instr.instruction}} </ion-item>
     </ion-list>
-    </div>
-  </ion-slide>
-
-  <ion-slide>
-    <div>
-    <h1>Ingredients</h1>
-      <ion-list *ngFor="let ingredient of instant_ramen.ingredients">
-          <ion-item button> {{ingredient}} </ion-item>
-      </ion-list> 
-    </div>
-  </ion-slide>
-
-</ion-slides>
+  </div>
 </ion-content>

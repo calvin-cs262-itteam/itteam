@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { PopoverComponent} from '../popover/popover.component';
-import { Recipe } from '../recipe';
 import { Instruction } from '../instruction';
+import { MenuController } from '@ionic/angular';
+import { Recipe } from '../interfaces/recipe';
 
 @Component({
   selector: 'app-chicken-pot-pie',
@@ -14,7 +15,7 @@ export class ChickenPotPiePage implements OnInit {
   IMG_PATH = "../../assets/images/"
   deconstructed_chicken_pot_pie : Recipe;
 
-  constructor(private popCont: PopoverController) { 
+  constructor(private menu: MenuController, private popCont: PopoverController) { 
 
     this.deconstructed_chicken_pot_pie = new Recipe(
       "Deconstructed Chicken Pot Pie",
@@ -38,16 +39,22 @@ export class ChickenPotPiePage implements OnInit {
     )
   }
 
-  async showSuggestions(instr : Instruction) {
+  async showSuggestions(instruct : Instruction) {
     const popover = await this.popCont.create({
         component : PopoverComponent,
-        componentProps : {instr : instr},
+        componentProps : {instr : instruct},
         translucent : true
     });
     return await popover.present();
     }
+  openFirst() {
+    this.menu.enable(true, 'menu1');
+    this.menu.open('menu1');
+  }
 
   ngOnInit() {
   }
+
+  
 
 }

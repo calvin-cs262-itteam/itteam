@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { PopoverComponent} from '../popover/popover.component';
-import { Recipe } from '../recipe';
 import { Instruction } from '../instruction';
+import { MenuController } from '@ionic/angular';
+import { Recipe } from '../interfaces/recipe';
 
 @Component({
   selector: 'app-eggs-benedict',
@@ -14,11 +15,11 @@ export class EggsBenedictPage implements OnInit {
   IMG_PATH = "../../assets/images/"
   eggs_benedict : Recipe;
 
-  constructor(private popCont: PopoverController) { 
+  constructor(private menu: MenuController, private popCont: PopoverController) { 
 
     this.eggs_benedict = new Recipe(
       "Eggs Benedict", 
-      "Creates 4 servings. Takes 35 minutes.",
+      "A fresh take on the classic breakfast. Makes 4 servings. Takes 35 minutes.",
       this.IMG_PATH + "eggs_benedict.jpg",
 
       ["Melt 12 tablespoons of butter in small pot till foamy, 3-4 minutes",
@@ -29,7 +30,7 @@ export class EggsBenedictPage implements OnInit {
        "Stir in clockwise motion",
        "For up to 4 eggs,gently crack 1 egg into center allowing water to swirl until yolk covered then next egg",
        "Continue poaching for about 4-5 minutes then set aside",
-       "Tost english muffins",
+       "Toast english muffins",
        "Cook canadian bacon/ham in skillet for about 6 minuts on medium-high heat",
        "Butter muffin, top with meat, poached egg, then sauce", 
        "Season with chives, dill, salt and pepper"],
@@ -49,14 +50,18 @@ export class EggsBenedictPage implements OnInit {
 
   }
 
-  async showSuggestions(instr : Instruction) {
+  async showSuggestions(instruct: Instruction) {
     const popover = await this.popCont.create({
-        component : PopoverComponent,
-        componentProps : {instr : instr},
-        translucent : true
+        component: PopoverComponent,
+        componentProps: {instr: instruct},
+        translucent: true
     });
     return await popover.present();
     }
+  openFirst() {
+    this.menu.enable(true, 'menu2');
+    this.menu.open('menu2');
+  }
 
   ngOnInit() {
   }

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { PopoverComponent} from '../popover/popover.component';
-import { Recipe } from '../recipe';
 import { Instruction } from '../instruction';
+import { MenuController } from '@ionic/angular';
+import { Recipe } from '../interfaces/recipe';
 
 @Component({
   selector: 'app-pretzel',
@@ -14,7 +15,7 @@ export class PretzelPage implements OnInit {
   IMG_PATH = "../../assets/images/"
   pretzel : Recipe;
 
-  constructor(private popCont: PopoverController) { 
+  constructor(private menu: MenuController, private popCont: PopoverController) { 
 
     this.pretzel = new Recipe(
       "Soft Pretzels", 
@@ -53,6 +54,10 @@ export class PretzelPage implements OnInit {
     });
     return await popover.present();
     }
+  openFirst() {
+    this.menu.enable(true, 'menu4');
+    this.menu.open('menu4');
+  }
 
   ngOnInit() {
   }

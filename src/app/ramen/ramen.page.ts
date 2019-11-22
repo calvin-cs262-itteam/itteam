@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { PopoverComponent} from '../popover/popover.component';
-import { Recipe } from '../recipe';
 import { Instruction } from '../instruction';
+import { MenuController } from '@ionic/angular';
+import { Recipe } from '../interfaces/recipe';
 
 @Component({
   selector: 'app-ramen',
@@ -14,7 +15,7 @@ export class RamenPage implements OnInit {
   IMG_PATH = "../../assets/images/"
   instant_ramen : Recipe;
 
-  constructor(private popCont: PopoverController) { 
+  constructor(private menu: MenuController, private popCont: PopoverController) { 
 
     this.instant_ramen = new Recipe(
       "Instant Ramen for Adults",
@@ -39,6 +40,10 @@ export class RamenPage implements OnInit {
     });
     return await popover.present();
     }
+  openFirst() {
+    this.menu.enable(true, 'menu5');
+    this.menu.open('menu5');
+  }
 
   ngOnInit() {
   }

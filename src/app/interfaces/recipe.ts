@@ -1,4 +1,4 @@
-import { Instruction } from './instruction';
+import { Instruction } from '../instruction';
 // alright relode for me
 /**
  * Recipe class.

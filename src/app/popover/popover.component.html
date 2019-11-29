@@ -1,7 +1,7 @@
 <ion-content>
-  <ion-input spellcheck="true" type="text" [(ngModel)]="givenSug"></ion-input>
+  <ion-input spellcheck="true" type="text" [(ngModel)]="givenSug" clearInput></ion-input>
   <ion-button (click) = addSug() color = "warning">Add Suggestion</ion-button>
   <ion-list *ngFor="let sug of instr.suggestions">
     <ion-item> {{sug}} </ion-item>
-</ion-list> 
+  </ion-list> 
 </ion-content>

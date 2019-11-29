@@ -17,7 +17,9 @@ export class PopoverComponent implements OnInit {
    }
 
    addSug() {
-     this.instr.addSuggestion(this.givenSug);
+     if (this.givenSug != "" && this.givenSug){
+      this.instr.addSuggestion(this.givenSug);
+     }
    }
 
   ngOnInit() {}

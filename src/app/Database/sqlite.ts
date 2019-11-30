@@ -9,16 +9,23 @@ export class Database{
     private database: SQLiteObject;
     constructor(private sqlite: SQLite){
         this.sqlite.create({
-            name: 'test.db',
+            name: 'items.db',
             location: 'default'
         })
             .then((db: SQLiteObject) => {
             this.database = db;
 
-            db.executeSql('create table daceMoves(name VARCHAR(32))', [])
+            db.executeSql('create table danceMoves(name VARCHAR(32))', [])
             .then(() => console.log('Executed'))
             .catch(e =>console.log(e));
+            db.executeSql("INSERT INTO danceMoves whip")
         })
         .catch(e => console.log(e));
+            
     }
+    
+    get(){
+        console.log('got');
+        }
+
 }

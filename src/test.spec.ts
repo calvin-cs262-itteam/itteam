@@ -1,3 +1,6 @@
 import { Database } from './app/Database/sqlite'
 
-var testdb = Database;
+console.log('testing');
+var testdb : Database;
+testdb.get();
+console.log('done');

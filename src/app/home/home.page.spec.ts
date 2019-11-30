@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { HomePage } from './home.page';
+import { Database } from '../Database/sqlite'
+
 
 describe('HomePage', () => {
   let component: HomePage;
@@ -17,8 +19,14 @@ describe('HomePage', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
+  // it ('should connect'), () => {
+  //   console.log('testing');
+  //   var testdb = Database;
+  //   console.log('completed');
+  // }
+});
+
 
   // it('should create', () => {
   //   expect(component).toBeTruthy();
   // });
-});

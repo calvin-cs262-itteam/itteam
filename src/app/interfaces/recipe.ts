@@ -1,4 +1,5 @@
 import { Instruction } from '../instruction';
+import { ReplaceSource } from 'webpack-sources';
 // alright relode for me
 /**
  * Recipe class.
@@ -18,6 +19,7 @@ export class Recipe {
 
     // getters
     get name() : string { return this._name }
+    get name_(): string {return this._name.replace(/\s/g, '_'); }
     get description() : string { return this._description }
     get rating() : string { return this._rating.toPrecision(2) }
     get nratings() : number { return this._nratings }

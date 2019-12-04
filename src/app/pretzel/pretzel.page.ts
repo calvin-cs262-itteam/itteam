@@ -59,6 +59,10 @@ export class PretzelPage implements OnInit {
     this.menu.open('menu4');
   }
 
+  onRateChange(event) {
+    console.log('Your rate:', event);
+  }
+
   ngOnInit() {
   }
 

@@ -4,6 +4,8 @@ import { PopoverComponent} from '../popover/popover.component';
 import { Instruction } from '../instruction';
 import { MenuController } from '@ionic/angular';
 import { Recipe } from '../interfaces/recipe';
+import { Platform } from '@ionic/angular';
+import { AppRate } from '@ionic-native/app-rate/ngx';
 
 @Component({
   selector: 'app-chicken-pot-pie',
@@ -15,7 +17,7 @@ export class ChickenPotPiePage implements OnInit {
   IMG_PATH = "../../assets/images/"
   deconstructed_chicken_pot_pie : Recipe;
 
-  constructor(private menu: MenuController, private popCont: PopoverController) { 
+  constructor(private menu: MenuController, private popCont: PopoverController, public platform: Platform, private appRate: AppRate) { 
 
     this.deconstructed_chicken_pot_pie = new Recipe(
       "Deconstructed Chicken Pot Pie",
@@ -50,6 +52,10 @@ export class ChickenPotPiePage implements OnInit {
   openFirst() {
     this.menu.enable(true, 'menu1');
     this.menu.open('menu1');
+  }
+
+  onRateChange(event) {
+    console.log('Your rate:', event);
   }
 
   ngOnInit() {

@@ -45,6 +45,10 @@ export class RamenPage implements OnInit {
     this.menu.open('menu5');
   }
 
+  onRateChange(event) {
+    console.log('Your rate:', event);
+  }
+
   ngOnInit() {
   }
 

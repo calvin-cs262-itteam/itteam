@@ -6,6 +6,12 @@
     </ion-buttons>
     <ion-button color = "warning" href = "../home"><ion-icon name="arrow-back"></ion-icon></ion-button>
   </ion-toolbar>
+  <rating [(ngModel)]="rate"
+              readonly="false"
+      size="default"S
+      (ngModelChange)="onRateChange($event)">
+      
+      </rating>
 </ion-header>
 
 <ion-menu side="end" menuId="menu4">

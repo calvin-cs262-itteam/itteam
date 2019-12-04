@@ -50,6 +50,10 @@ export class TunaCasserolePage implements OnInit {
     this.menu.open('menu6');
   }
 
+  onRateChange(event) {
+    console.log('Your rate:', event);
+  }
+
   ngOnInit() {
   }
 

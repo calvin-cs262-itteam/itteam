@@ -80,6 +80,10 @@ export class MoroccanPastitsioPage implements OnInit {
     this.menu.open('menu3');
   }
 
+  onRateChange(event) {
+    console.log('Your rate:', event);
+  }
+
   ngOnInit() {
   }
 

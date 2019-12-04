@@ -63,11 +63,12 @@
                     <ion-card-header>
                       <ion-card-title><span [innerHTML] = "deconstructed_chicken_pot_pie.name"></span></ion-card-title>
                     </ion-card-header>
+
                     <ion-card-content>
                       <span [innerHTML] = "deconstructed_chicken_pot_pie.description"></span>
-                      <ion-list *ngFor="let tag of deconstructed_chicken_pot_pie.tags">
-                        <span [innerHTML] = tag.tagName></span>
-                      </ion-list>
+                      <ion-row><ion-col *ngFor="let tag of deconstructed_chicken_pot_pie.tags">
+                        <ion-text color= warning>#{{tag.tagName}}</ion-text>
+                      </ion-col></ion-row>
                     </ion-card-content> 
                 </ion-card>
             </div>
@@ -84,6 +85,9 @@
                 
                   <ion-card-content>
                     <span [innerHTML] = "pretzel.description" ></span>
+                    <ion-row><ion-col *ngFor="let tag of pretzel.tags">
+                      <ion-text color= warning>#{{tag.tagName}}</ion-text>
+                    </ion-col></ion-row>
                   </ion-card-content> 
               </ion-card>
             </div>
@@ -102,6 +106,9 @@
                     
                       <ion-card-content>
                         <span [innerHTML] = "eggs_benedict.description" ></span>
+                        <ion-row><ion-col *ngFor="let tag of eggs_benedict.tags">
+                          <ion-text color= warning>#{{tag.tagName}}</ion-text>
+                        </ion-col></ion-row>
                       </ion-card-content> 
                   </ion-card>
                 </div>
@@ -118,6 +125,9 @@
                       
                         <ion-card-content>
                           <span [innerHTML] = "instant_ramen.description" ></span>
+                          <ion-row><ion-col *ngFor="let tag of instant_ramen.tags">
+                            <ion-text color= warning>#{{tag.tagName}}</ion-text>
+                          </ion-col></ion-row>
                         </ion-card-content> 
                     </ion-card>
                   </div>
@@ -136,6 +146,9 @@
                     
                       <ion-card-content>
                         <span [innerHTML] = "tuna_casserole.description" ></span>
+                        <ion-row><ion-col *ngFor="let tag of tuna_casserole.tags">
+                          <ion-text color= warning>#{{tag.tagName}}</ion-text>
+                        </ion-col></ion-row>
                       </ion-card-content> 
                   </ion-card>
                 </div>
@@ -152,6 +165,9 @@
                       
                         <ion-card-content>
                           <span [innerHTML] = "moroccan_pastitsio.description" ></span>
+                          <ion-row><ion-col *ngFor="let tag of moroccan_pastitsio.tags">
+                            <ion-text color= warning>#{{tag.tagName}}</ion-text>
+                          </ion-col></ion-row>
                         </ion-card-content> 
                     </ion-card>
                   </div>

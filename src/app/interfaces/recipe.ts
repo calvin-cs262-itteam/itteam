@@ -50,6 +50,7 @@ export class Recipe {
         for (let instr of instrList) {
             this._instructions.push(new Instruction(instr))
         }
+        this._tags = [];
     }
     //TODO: Explicit constructor to load class from db
 

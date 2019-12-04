@@ -60,7 +60,6 @@ export class HomePage {
        'Biscuits, for serving']
     )
     this.deconstructed_chicken_pot_pie.addTag('Short', 'Time');
-    this.deconstructed_chicken_pot_pie.addTag('Simple', 'Difficulty');
 
     this.instant_ramen = new Recipe(
       'Instant Ramen for Adults',
@@ -74,6 +73,8 @@ export class HomePage {
        '1/2 teaspoon Kosher salt', 
        '1 cup sliced cooked chicken breast']
     )
+    this.instant_ramen.addTag('Short', 'Time');
+    this.instant_ramen.addTag('Simple', 'Difficulty');
 
     this.pretzel = new Recipe(
       'Soft Pretzels', 
@@ -101,6 +102,7 @@ export class HomePage {
        '3 3/4 - 4 cups, all purpose flour',
        '1/2 cup baking soda in 9 cups water']
     );
+    this.pretzel.addTag('Snack', 'Meal Type');
 
     this.eggs_benedict = new Recipe(
       'Eggs Benedict', 
@@ -132,6 +134,9 @@ export class HomePage {
        '2 tablespoons, chopped dill/tarragon/parsley',
        'salt and ground pepper']
     );
+    this.eggs_benedict.addTag('Short', 'Time');
+    this.eggs_benedict.addTag('Complex', 'Difficulty');
+    this.eggs_benedict.addTag('Breakfast', 'Meal Type'); 
 
     this.moroccan_pastitsio = new Recipe(
       'Moroccan Pastisio', 
@@ -180,6 +185,8 @@ export class HomePage {
        '1 pound, penne rigate',
        '1/2 cup, grated parmesan cheese']
     );
+    this.moroccan_pastitsio.addTag('Long', 'Time');
+    this.moroccan_pastitsio.addTag('Complex', 'Difficulty');
 
     this.tuna_casserole = new Recipe(
       'Easy Tuna Casserole', 
@@ -198,6 +205,8 @@ export class HomePage {
        '1 cup, shredded chedder cheese',
        '1 1/2 cups, french fried onions']
     );
+    this.tuna_casserole.addTag('Short', 'Time');
+    this.tuna_casserole.addTag('Simple', 'Time');
 
   }
 //search bar start

@@ -63,6 +63,10 @@ export class EggsBenedictPage implements OnInit {
     this.menu.open('menu2');
   }
 
+  onRateChange(event) {
+    console.log('Your rate:', event);
+  }
+
   ngOnInit() {
   }
 

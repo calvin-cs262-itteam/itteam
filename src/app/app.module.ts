@@ -9,7 +9,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PopoverComponent } from './popover/popover.component'
+import { PopoverComponent } from './popover/popover.component';
+import { AppRate } from '@ionic-native/app-rate/ngx'
+
 
 @NgModule({
   declarations: [AppComponent, PopoverComponent],
@@ -18,6 +20,7 @@ import { PopoverComponent } from './popover/popover.component'
   providers: [
     StatusBar,
     SplashScreen,
+    AppRate,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

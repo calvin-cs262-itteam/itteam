@@ -65,6 +65,9 @@
                     </ion-card-header>
                     <ion-card-content>
                       <span [innerHTML] = "deconstructed_chicken_pot_pie.description"></span>
+                      <ion-list *ngFor="let tag of deconstructed_chicken_pot_pie.tags">
+                        <span [innerHTML] = tag.tagName></span>
+                      </ion-list>
                     </ion-card-content> 
                 </ion-card>
             </div>

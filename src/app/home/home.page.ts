@@ -59,6 +59,8 @@ export class HomePage {
        '1 lemon wedge', 
        'Biscuits, for serving']
     )
+    this.deconstructed_chicken_pot_pie.addTag('Short', 'Time');
+    this.deconstructed_chicken_pot_pie.addTag('Simple', 'Difficulty');
 
     this.instant_ramen = new Recipe(
       'Instant Ramen for Adults',

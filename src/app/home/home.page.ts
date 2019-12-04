@@ -198,6 +198,34 @@ export class HomePage {
     );
 
   }
+//search bar start
+  topics: string[];
+
+  generateTopics(){
+    this.topics =[
+      'Deconstructed Chicken Pot Pie',
+      'Instant Ramen for Adults',
+      'Soft Pretzels', 
+      "Eggs Benedict",
+      'Moroccan Pastisio', 
+      'Easy Tuna Casserole'
+    ];
+  }
+
+  getTopics(ev: any){
+    this.generateTopics();
+    let serVal = ev.target.value;
+    if(serVal && serVal.trim() != ''){
+      this.topics = this.topics.filter((topic) => {
+        return (topic.toLowerCase().indexOf(serVal.toLowerCase()) > -1);
+      })
+    }
+    }
+  
+
+  
+
+//search bar end
 
   openFirst() {
     this.menu.enable(true, 'first');

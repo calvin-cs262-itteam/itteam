@@ -3,7 +3,7 @@
     <ion-header translucent>
       <ion-toolbar text-center color = "warning">
         <ion-title color = "warning">-</ion-title>
-        <ion-searchbar text-left showCancelButton = "focus" placeholder = "Find a recipe!"></ion-searchbar>
+
         <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
@@ -11,6 +11,13 @@
           -
         </ion-title>
       </ion-toolbar>
+
+      <ion-searchbar (ionInput)="getTopics($event)" showCancelButton=true cancelButtonText="Custom Cancel" text-left [showCancelButton]="shouldShowCancel" (ionCancel)="onCancel($event)" placeholder="Find a Recipe!"></ion-searchbar>
+          
+            <ion-item *ngFor="let topic of topics">
+              {{topic}}
+            </ion-item>
+
       <ion-toolbar text-center>
         <ion-title>Featured Recipes</ion-title>
       </ion-toolbar>

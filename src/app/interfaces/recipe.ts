@@ -1,4 +1,6 @@
 import { Instruction } from '../instruction';
+import { Tag } from '../tag';
+
 // alright relode for me
 /**
  * Recipe class.
@@ -12,6 +14,7 @@ export class Recipe {
     private _imgPath : string;          // Path to image of recipe
     private _ingredients : string[];    // Ingredient list
     private _instructions : Instruction[];   // Instruction list
+    private _tags : Tag[];              // Tag list
     //TODO: Ingredients, instructions
     //TODO: add tags
     //TODO: We'll probably want a rating class in the future so we can tie specific ratings to users, but for now we can use numbers
@@ -24,6 +27,7 @@ export class Recipe {
     get imgPath() : string { return this._imgPath }
     get ingredients() : string[] { return this._ingredients }
     get instructions() : Instruction[] { return this._instructions }
+    get tags() : Tag[] { return this._tags }
 
     /**
      * The constructor doesn't get rating info because ratings start unrated.
@@ -45,6 +49,7 @@ export class Recipe {
         for (let instr of instrList) {
             this._instructions.push(new Instruction(instr))
         }
+        this._tags = [];
     }
     //TODO: Explicit constructor to load class from db
 
@@ -60,5 +65,13 @@ export class Recipe {
             total += r;     // potential speedup could be storing total instead of calculating every time
         });
         this._rating = total / this._nratings;
+    }
+
+    /* Adds new tag to tag list
+     * @param name, tag name
+     * @param type, tag type
+     */
+    addTag(name: string, type: string) {
+        this._tags.push(new Tag(name, type))
     }
 }

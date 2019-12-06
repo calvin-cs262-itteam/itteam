@@ -5,7 +5,7 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
   providedIn: 'root'
 })
 export class RecipeService {
-  
+
   private database: SQLiteObject;
 
   constructor(private sqlite: SQLite) {
@@ -22,16 +22,16 @@ export class RecipeService {
         Name VARCHAR(255),
         Description VARCHAR(255)
       )
-      INSERT INTO Recipe ('1','soup','soupy')  
-      `)
+      INSERT INTO Recipe ('1','soup','soupy')
+      `);
       console.log('database created');
 
-    })
+    });
 
   }
   talk() {
     return this.database.executeSql(`
     SELECT * FROM Recipe
-    `)
+    `);
   }
 }

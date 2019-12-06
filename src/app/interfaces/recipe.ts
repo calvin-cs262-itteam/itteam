@@ -1,5 +1,4 @@
 import { Instruction } from '../instruction';
-import { timingSafeEqual } from 'crypto';
 import { Tag } from '../tag';
 
 // alright relode for me

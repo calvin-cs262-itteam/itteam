@@ -12,6 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
 
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
+
+
 import { Camera } from '@ionic-native/camera/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
@@ -25,6 +28,7 @@ import { FilePath } from '@ionic-native/file-path/ngx';
   providers: [
     StatusBar,
     SplashScreen,
+    SQLite,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   Camera, File, WebView, FilePath],
   bootstrap: [AppComponent]

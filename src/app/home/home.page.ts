@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { Recipe } from '../interfaces/recipe';
 import { R3ExpressionFactoryMetadata } from '@angular/compiler/src/render3/r3_factory';
 import { MenuController } from '@ionic/angular';
+import { RecipeService } from '../SQLITE/recipe.service';
+
+
 
 @Component({
   selector: 'app-home',
@@ -9,7 +12,6 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
   IMG_PATH = '../../assets/images/';
 
   exampleRecipe: Recipe;
@@ -23,8 +25,13 @@ export class HomePage {
   cheesecake: Recipe;
   quesillo: Recipe;
 
-  constructor(private menu: MenuController) {
 
+  constructor(private menu: MenuController, private db: RecipeService) {
+
+    console.log('1');
+    console.log(db.talk());
+    console.log('2');
+    
     this.exampleRecipe = new Recipe(
       'Name',
       'A very cool description',

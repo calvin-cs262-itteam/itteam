@@ -12,8 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
 
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
-
+import { SQLite } from '@ionic-native/sqlite/ngx';
 
 import { Camera } from '@ionic-native/camera/ngx';
 import { File } from '@ionic-native/file/ngx';

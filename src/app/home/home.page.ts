@@ -26,10 +26,17 @@ export class HomePage {
   quesillo: Recipe;
 
 
-  constructor(private menu: MenuController, private db: RecipeService) {
+  constructor(private menu: MenuController, public db: RecipeService) {
 
     console.log('1');
-    console.log(db.talk());
+    // var itemList : Array<Object>;
+    // itemList = []; 
+    // console.log(itemList)   
+    // this.db.getData().then((result) => {
+    // itemList = <Array<Object>> result;
+    // console.log(itemList)
+    // })
+    //db.enterData();
     console.log('2');
     
     this.exampleRecipe = new Recipe(

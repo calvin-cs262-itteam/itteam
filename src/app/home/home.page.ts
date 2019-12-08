@@ -29,15 +29,18 @@ export class HomePage {
   constructor(private menu: MenuController, public db: RecipeService) {
 
     console.log('1');
-    // var itemList : Array<Object>;
-    // itemList = []; 
-    // console.log(itemList)   
-    // this.db.getData().then((result) => {
-    // itemList = <Array<Object>> result;
-    // console.log(itemList)
-    // })
-    //db.enterData();
-    console.log('2');
+
+    db.getDatabaseState().subscribe(rdy => {
+      if (rdy) {
+        db.delete(1);
+        db.create(1,'Jeff', 'Soup', 'yummy saucy soup', 'soup.jpg');
+        let itemOne  = db.get(1);
+        // let itemList = db.get(0);
+        console.log(itemOne)
+        // console.log(itemOne.toString());
+        
+    }
+    })
     
     this.exampleRecipe = new Recipe(
       'Name',

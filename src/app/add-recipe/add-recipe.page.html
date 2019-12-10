@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color = "light">
+    <ion-title>Add A New Recipe</ion-title>
+    <ion-button color = "warning" href = "../home"><ion-icon name="arrow-back"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Recipe Name</ion-label>
+    <ion-input placeholder="Chicken Pot Pie"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Tags</ion-label>
+    <ion-input placeholder="#easy, #quick"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Preparation Time</ion-label>
+    <ion-input placeholder="30 minutes"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Cook Time</ion-label>
+    <ion-input placeholder="60 minutes"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Number of Servings</ion-label>
+    <ion-input placeholder="6"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Recipe Description</ion-label>
+    <ion-textarea></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Ingredients</ion-label>
+    <ion-textarea placeholder="1 bag of frozen mixed vegetables, 1 packaged pie crust..."></ion-textarea>
+  </ion-item>
+
+  <h6>Recipe Steps</h6>
+  <ion-list lines="none">
+    <form [formGroup]="myForm">
+      <ion-item *ngFor="let control of myForm.controls | keyvalue">
+        <ion-input [formControlName]="control.key" placeHolder="enter step..."></ion-input>
+        <ion-icon (click)="removeControl(control)" name="close-circle"></ion-icon>
+      </ion-item>
+    </form>
+  </ion-list>
+
+  <ion-button color="warning" (click)="addControl()">Add Step</ion-button>
+  <div></div>
+  <ion-button color = "warning" >Add Recipe</ion-button>
+
+</ion-content>

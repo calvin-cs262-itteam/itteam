@@ -54,108 +54,19 @@
       <ion-router-outlet main></ion-router-outlet>
 
     <ion-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <div>
-                <ion-card color = "light" button href = "../chicken-pot-pie">
-                   <img src = "{{deconstructed_chicken_pot_pie.imgPath}}" style ="height: 200px;width:200px;"/>
-                    <ion-card-header>
-                      <ion-card-title><span [innerHTML] = "deconstructed_chicken_pot_pie.name"></span></ion-card-title>
-                    </ion-card-header>
-                    <ion-card-content>
-                      <span [innerHTML] = "deconstructed_chicken_pot_pie.description"></span>
-                    </ion-card-content> 
-                </ion-card>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div>
-              <ion-card color = "light" button href = "../pretzel">
-                  <img src = "{{pretzel.imgPath}}" style ="height: 200px;width:200px;"/>
-                  <ion-card-header>
-                    <ion-card-title>
-                      <span [innerHTML] = "pretzel.name"></span>
-                    </ion-card-title>
-                  </ion-card-header>
-                
-                  <ion-card-content>
-                    <span [innerHTML] = "pretzel.description" ></span>
-                  </ion-card-content> 
-              </ion-card>
-            </div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                  <ion-card color = "light" button href = "../eggs-benedict">
-                      <img src = "{{eggs_benedict.imgPath}}" style ="height: 200px;width:200px;"/>
-                      <ion-card-header>
-                        <ion-card-title>
-                          <span [innerHTML] = "eggs_benedict.name"></span>
-                        </ion-card-title>
-                      </ion-card-header>
-                    
-                      <ion-card-content>
-                        <span [innerHTML] = "eggs_benedict.description" ></span>
-                      </ion-card-content> 
-                  </ion-card>
-                </div>
-              </ion-col>
-              <ion-col>
-                  <div>
-                    <ion-card color = "light" button href = "../ramen">
-                        <img src = "{{instant_ramen.imgPath}}" style ="height: 200px;width:200px;"/>
-                        <ion-card-header>
-                          <ion-card-title>
-                            <span [innerHTML] = "instant_ramen.name"></span>
-                          </ion-card-title>
-                        </ion-card-header>
-                      
-                        <ion-card-content>
-                          <span [innerHTML] = "instant_ramen.description" ></span>
-                        </ion-card-content> 
-                    </ion-card>
-                  </div>
-                </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>
-                  <ion-card color = "light" button href = "../tuna-casserole">
-                      <img src = "{{tuna_casserole.imgPath}}" style ="height: 200px;width:200px;"/>
-                      <ion-card-header>
-                        <ion-card-title>
-                          <span [innerHTML] = "tuna_casserole.name"></span>
-                        </ion-card-title>
-                      </ion-card-header>
-                    
-                      <ion-card-content>
-                        <span [innerHTML] = "tuna_casserole.description" ></span>
-                      </ion-card-content> 
-                  </ion-card>
-                </div>
-              </ion-col>
-              <ion-col>
-                  <div>
-                    <ion-card color = "light" button href = "../moroccan-pastitsio">
-                        <img src = "{{moroccan_pastitsio.imgPath}}" style ="height: 200px;width:200px;"/>
-                        <ion-card-header>
-                          <ion-card-title>
-                            <span [innerHTML] = "moroccan_pastitsio.name"></span>
-                          </ion-card-title>
-                        </ion-card-header>
-                      
-                        <ion-card-content>
-                          <span [innerHTML] = "moroccan_pastitsio.description" ></span>
-                        </ion-card-content> 
-                    </ion-card>
-                  </div>
-                </ion-col>
-        </ion-row>
-      </ion-grid>
-      
-      </ion-content>
+      <ion-card *ngFor="let item of recipeList" color="light" button [href] = "'../recipe/' + item.name_" routerDirection="forward">
+        <ion-item color="light">
+          <img src = "{{item.imgPath}}" style="height:150px;width:150px;" slot="start"/>
+          <div>
+          <ion-card-title>
+            <b><span [innerHTML] = "item.name"></span></b>
+          </ion-card-title>
+          <ion-card-content>
+            <span [innerHTML] = "item.description"></span>
+          </ion-card-content>
+          </div>
+        </ion-item>
+      </ion-card>
+    </ion-content>
   </ion-app>
 </body>

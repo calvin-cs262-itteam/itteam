@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Recipe } from '../interfaces/recipe';
 
 @Component({
   selector: 'app-recipe',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipePage implements OnInit {
 
-  constructor() { }
+  private recipe: Recipe;
+
+  constructor(private route: ActivatedRoute) {
+    // this.recipe = {
+
+    // }
+  }
 
   ngOnInit() {
   }

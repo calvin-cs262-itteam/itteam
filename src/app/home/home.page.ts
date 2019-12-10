@@ -21,7 +21,11 @@ export class HomePage {
   moroccan_pastitsio : Recipe;
   tuna_casserole : Recipe;
 
+  recipeList: Array<Recipe>;
+
   constructor(private menu: MenuController) {
+
+    this.recipeList = new Array<Recipe>();
     
     this.exampleRecipe = new Recipe(
       'Name', 
@@ -58,7 +62,8 @@ export class HomePage {
        '1 cup frozen peas and carrots', 
        '1 lemon wedge', 
        'Biscuits, for serving']
-    )
+    );
+    this.recipeList.push(this.deconstructed_chicken_pot_pie);
 
     this.instant_ramen = new Recipe(
       'Instant Ramen for Adults',
@@ -71,7 +76,8 @@ export class HomePage {
        '1 teaspoon ground turmeric', 
        '1/2 teaspoon Kosher salt', 
        '1 cup sliced cooked chicken breast']
-    )
+    );
+    this.recipeList.push(this.instant_ramen);
 
     this.pretzel = new Recipe(
       'Soft Pretzels', 
@@ -99,6 +105,7 @@ export class HomePage {
        '3 3/4 - 4 cups, all purpose flour',
        '1/2 cup baking soda in 9 cups water']
     );
+    this.recipeList.push(this.pretzel);
 
     this.eggs_benedict = new Recipe(
       'Eggs Benedict', 
@@ -130,6 +137,7 @@ export class HomePage {
        '2 tablespoons, chopped dill/tarragon/parsley',
        'salt and ground pepper']
     );
+    this.recipeList.push(this.eggs_benedict);
 
     this.moroccan_pastitsio = new Recipe(
       'Moroccan Pastisio', 
@@ -178,6 +186,7 @@ export class HomePage {
        '1 pound, penne rigate',
        '1/2 cup, grated parmesan cheese']
     );
+    this.recipeList.push(this.moroccan_pastitsio);
 
     this.tuna_casserole = new Recipe(
       'Easy Tuna Casserole', 
@@ -196,6 +205,7 @@ export class HomePage {
        '1 cup, shredded chedder cheese',
        '1 1/2 cups, french fried onions']
     );
+    this.recipeList.push(this.tuna_casserole);
 
   }
 //search bar start

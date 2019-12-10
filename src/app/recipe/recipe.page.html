@@ -1,9 +1,34 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>recipe</ion-title>
+  <ion-toolbar color = "light">
+    <ion-title>Moroccan Pastitsio</ion-title>
+    <ion-buttons slot = "end">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-button color = "warning" href = "../home"><ion-icon name="arrow-back"></ion-icon></ion-button>
   </ion-toolbar>
 </ion-header>
 
+<ion-menu side="end" menuId="menu3">
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-title>Ingredients</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list *ngFor="let ingredient of moroccan_pastitsio.ingredients">
+      <ion-item button> {{ingredient}} </ion-item>
+    </ion-list> 
+  </ion-content>
+</ion-menu>
+  
+<ion-router-outlet main></ion-router-outlet>
+  
 <ion-content>
+  <div>
+    <img src="{{moroccan_pastitsio.imgPath}}" style ="height: 300px;width:300px;"/>
 
+    <ion-list *ngFor="let instr of moroccan_pastitsio.instructions">
+      <ion-item button (click)="showSuggestions(instr)"> {{instr.instruction}} </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

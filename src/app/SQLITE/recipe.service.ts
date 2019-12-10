@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
-import { async } from 'q';
 import { BehaviorSubject, Observable} from 'rxjs';
-import { INT_TYPE } from '@angular/compiler/src/output/output_ast';
+
 
 @Injectable({
   providedIn: 'root'
@@ -33,52 +32,44 @@ export class RecipeService {
     return this.dbReady.asObservable();
   }
   createTables(){
-      this.database.executeSql(`
-      CREATE TABLE IF NOT EXISTS Recipe (
+      this.database.sqlBatch([
+      'DROP TABLE IF EXISTS Recipe',
+      `CREATE TABLE IF NOT EXISTS Recipe (
         ID INTEGER PRIMARY KEY,
-        UserID TEXT,
+        User TEXT,
         Name TEXT,
         Description TEXT,
-        imgPath TEXT
-    );`, []);
+        imgPath TEXT)`
+      ]);
 }
-  create(id: Number, userId: String, name: String, description: String, imgPath: String, ){
+  create(id: Number, User: String, name: String, description: String, imgPath: String, ){
     let sqlText;
     sqlText = `INSERT INTO Recipe VALUES (?,?,?,?,?)`;
-    this.database.executeSql(sqlText, [id, userId, name, description, imgPath]);
+    this.database.executeSql(sqlText, [id, User, name, description, imgPath]);
   }
   get(id: Number) : Array<String | number> {
-    if (id == 0){
-      var items = [];
-      this.database.executeSql('SELECT * FROM Recipe', []).then( (res) => {
-        for (let i = 0; i < res.rows.length ; i++){
-          items.push({
-            id: res.rows.item(i).ID,
-            UserId: res.rows.item(i).UserId,
-            Name: res.rows.item(i).Name,
-            Description: res.rows.item(i).Description,
-            imgPath: res.rows.item(i).imgPath
-          });
-        }
-        return items;
-      })
-    }
-  else{
-    var item = []
+    let item : (string | number)[];
     this.database.executeSql('SELECT * FROM Recipe WHERE ID = ?', [id]).then( data => {
 
-      item.push(
-        data.rows.item(0).ID,
-        data.rows.item(0).UserId,
-        data.rows.item(0).Name,
-        data.rows.item(0).Description,
-        data.rows.item(0).imgPath
-      );
+      let ID = data.rows.item(0).ID;
+      let User = data.rows.item(0).User;
+      let Name = data.rows.item(0).Name;
+      let Description = data.rows.item(0).Description;
+      let imgPath = data.rows.item(0).imgPath;
+      
+      item = [ID, User, Name, Description, imgPath];
+
+      console.log(ID);
+      console.log(User);
+      console.log(Name);
+      console.log(typeof(Name));
+      console.log(item);
+      console.log(typeof(item));
+      console.log(item[2]);
     });
     return item;
-  }
-  
 }
+
   delete(id) {
     this.database.executeSql('DELETE FROM Recipe WHERE ID = ?', [id]);
   }

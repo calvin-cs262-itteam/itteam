@@ -32,12 +32,13 @@ export class HomePage {
 
     db.getDatabaseState().subscribe(rdy => {
       if (rdy) {
-        db.delete(1);
-        db.create(1,'Jeff', 'Soup', 'yummy saucy soup', 'soup.jpg');
-        let itemOne  = db.get(1);
+        //db.delete(1);
+        db.create(1,'carl,', 'waffle', 'waffle mode', 'waffle.jpg')
+        db.create(2,'Jeffrey', 'Soup', 'yummy saucy soupy', 'soup.jpg');
+        let itemOne  = db.get(2);
         // let itemList = db.get(0);
-        console.log(itemOne)
-        // console.log(itemOne.toString());
+        console.log(itemOne);
+        console.log(itemOne[2])
         
     }
     })

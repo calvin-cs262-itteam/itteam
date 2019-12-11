@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'moroccan-pastitsio', loadChildren: './moroccan-pastitsio/moroccan-pastitsio.module#MoroccanPastitsioPageModule' },
   { path: 'tuna-casserole', loadChildren: './tuna-casserole/tuna-casserole.module#TunaCasserolePageModule' },
   { path: 'add-recipe', loadChildren: './add-recipe/add-recipe.module#AddRecipePageModule' },
+  { path: 'help', loadChildren: './help/help.module#HelpPageModule' },
 ];
 
 @NgModule({

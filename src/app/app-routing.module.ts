@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: 'pretzel', loadChildren: './pretzel/pretzel.module#PretzelPageModule' },
   { path: 'eggs-benedict', loadChildren: './eggs-benedict/eggs-benedict.module#EggsBenedictPageModule' },
   { path: 'moroccan-pastitsio', loadChildren: './moroccan-pastitsio/moroccan-pastitsio.module#MoroccanPastitsioPageModule' },
-  { path: 'tuna-casserole', loadChildren: './tuna-casserole/tuna-casserole.module#TunaCasserolePageModule' },  { path: 'recipe', loadChildren: './recipe/recipe.module#RecipePageModule' },
+  { path: 'tuna-casserole', loadChildren: './tuna-casserole/tuna-casserole.module#TunaCasserolePageModule' },
+  { path: 'recipe/:_name', loadChildren: './recipe/recipe.module#RecipePageModule' },
 
 ];
 

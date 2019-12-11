@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { AddRecipePage } from './add-recipe.page';
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { AddRecipePage } from './add-recipe.page';
       }
     ])
   ],
-  declarations: [AddRecipePage]
+  declarations: [AddRecipePage],
+  providers: [Camera]
 })
 export class AddRecipePageModule {}

@@ -53,6 +53,22 @@
 
   <ion-button color="warning" (click)="addControl()">Add Step</ion-button>
   <div></div>
+  
+  <br>
+
+  <img *ngIf="currentImage" [src]="currentImage"/>
+  <ion-footer>
+    <ion-row class="footer-toolbar">
+      <ion-button (click)="takePicture()" class= "take-picture" color="warning">
+        <ion-icon name="camera"></ion-icon>
+         Add a Recipe Picture
+      </ion-button>
+    </ion-row>
+  </ion-footer>
+  <br>
   <ion-button color = "warning" >Add Recipe</ion-button>
+
+
+ 
 
 </ion-content>

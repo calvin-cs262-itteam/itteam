@@ -1,7 +1,7 @@
-<ion-content>
-  <ion-input spellcheck="true" type="text" [(ngModel)]="givenSug" clearInput></ion-input>
+<ion-content scrollY="true">
+  <ion-input placeholder="Enter Suggestion" spellcheck="true" type="text" [(ngModel)]="givenSug" clearInput></ion-input>
   <ion-button (click) = addSug() color = "warning">Add Suggestion</ion-button>
-  <ion-list *ngFor="let sug of instr.suggestions">
+  <ion-list *ngFor="let sug of instr.suggestions.slice().reverse()">
     <ion-item> {{sug}} </ion-item>
   </ion-list> 
 </ion-content>

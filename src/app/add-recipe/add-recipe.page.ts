@@ -8,23 +8,38 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 })
 export class AddRecipePage {
 
-  public myForm: FormGroup;
+  public ingrForm: FormGroup;
+  public stepForm: FormGroup;
   // tslint:disable-next-line: no-inferrable-types
-  private playerCount: number = 1;
+  private ingrCount: number = 1;
+  private stepCount: number = 1;
 
   constructor(private formBuilder: FormBuilder) {
-
-    this.myForm = formBuilder.group({
-      player1: ['', Validators.required]
+    
+    this.ingrForm = formBuilder.group({
+      ingredient1: ['', Validators.required]
+    });
+    this.stepForm = formBuilder.group({
+      instruction1: ['', Validators.required]
     });
   }
-  addControl() {
-    this.playerCount++;
-    this.myForm.addControl('player' + this.playerCount, new FormControl('', Validators.required));
+
+  // controls for ingredient list
+  addIngredient() {
+    this.ingrCount++;
+    this.ingrForm.addControl('player' + this.ingrCount, new FormControl('', Validators.required));
+  }
+  removeIngredient(control) {
+    this.ingrForm.removeControl(control.key);
   }
 
-  removeControl(control) {
-    this.myForm.removeControl(control.key);
+  // controls for step list
+  addStep() {
+    this.stepCount++;
+    this.stepForm.addControl('player' + this.stepCount, new FormControl('', Validators.required));
+  }
+  removeStep(control) {
+    this.stepForm.removeControl(control.key);
   }
 }
 

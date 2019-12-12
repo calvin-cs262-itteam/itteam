@@ -12,6 +12,8 @@ const routes: Routes = [
   { path: 'tuna-casserole', loadChildren: './tuna-casserole/tuna-casserole.module#TunaCasserolePageModule' },
   { path: 'recipe/:_name', loadChildren: './recipe/recipe.module#RecipePageModule' },
 
+  { path: 'add-recipe', loadChildren: './add-recipe/add-recipe.module#AddRecipePageModule' },
+  { path: 'help', loadChildren: './help/help.module#HelpPageModule' },
 ];
 
 @NgModule({

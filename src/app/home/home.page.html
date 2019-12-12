@@ -31,22 +31,18 @@
         </ion-header>
         <ion-content>
           <ion-list>
-            <ion-item>
+            <ion-item item href = "../home">
               <ion-icon name="home" slot="start"></ion-icon>
               <ion-label>Home</ion-label>
             </ion-item>
             <ion-item>
-              <ion-icon name="person" slot="start"></ion-icon>
-              <ion-label>Profile</ion-label>
+              <ion-icon name="settings" slot="start"></ion-icon>
+              <ion-label>Settings</ion-label>
             </ion-item>
-            <ion-item>
-              <ion-icon name="star" slot="start"></ion-icon>
-              <ion-label>Favorites</ion-label>
+            <ion-item item href = "../help">
+              <ion-icon name="help" slot="start"></ion-icon>
+              <ion-label>Help</ion-label>
             </ion-item>
-            <ion-item>
-                <ion-icon name="settings" slot="start"></ion-icon>
-                <ion-label>Settings</ion-label>
-              </ion-item>
           </ion-list>
         </ion-content>
       </ion-menu>
@@ -63,6 +59,9 @@
           </ion-card-title>
           <ion-card-content>
             <span [innerHTML] = "item.description"></span>
+            <ion-row><ion-col *ngFor="let tag of recipe.tags">
+              <ion-text color= warning>#{{tag.tagName}}</ion-text>
+            </ion-col></ion-row>
           </ion-card-content>
           </div>
         </ion-item>

@@ -2,7 +2,7 @@
   <ion-toolbar color = "light">
     <ion-title>Instant Ramen for Adults</ion-title>
     <ion-buttons slot = "end">
-      <ion-menu-button></ion-menu-button>
+      <ion-menu-button><ion-icon name="basket"></ion-icon></ion-menu-button>
     </ion-buttons>
     <ion-button color = "warning" href = "../home"><ion-icon name="arrow-back"></ion-icon></ion-button>
   </ion-toolbar>
@@ -22,7 +22,7 @@
   </ion-header>
   <ion-content>
     <ion-list *ngFor="let ingredient of instant_ramen.ingredients">
-      <ion-item button> {{ingredient}} </ion-item>
+      <ion-item> {{ingredient}} </ion-item>
     </ion-list> 
   </ion-content>
 </ion-menu>

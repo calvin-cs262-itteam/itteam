@@ -1,7 +1,6 @@
 import { Instruction } from '../instruction';
 import { Tag } from '../tag';
 
-// alright relode for me
 /**
  * Recipe class.
  */
